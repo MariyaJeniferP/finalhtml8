@@ -1,0 +1,160 @@
+<html>
+    <head>
+      <script>
+         function place(){
+            alert(`Your Order Placed`)
+         }
+      </script>
+        <script src="https://kit.fontawesome.com/65d192cc5e.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+        <style>
+            body{
+                background-color: pink;
+            }
+            .order{
+               margin-left: 590px;
+               margin-top: 50px;
+               color: red;
+               font-size: 50px;
+               text-decoration: underline;
+               text-decoration-color:black;
+               text-underline-offset: 10px;
+               font-family: "Caveat", cursive;
+               font-optical-sizing: auto;
+               font-weight: weight;
+               font-style: normal;
+             }
+            .size{
+               margin: 60px;
+               margin-left: 350px;
+               border: 3px solid black;
+               height: 500px;
+               width: 800px;
+               background-image: url("back.jpeg");
+               background-repeat: no-repeat;
+               padding-left: 100px;
+               padding-top: 50px;
+               background-size: cover;
+               background-position: left;
+               color: white;
+               font-size: 20px;
+             }
+             .size-button{
+               height: 50px;
+               width: 200px;
+               margin-left: -200px;
+               margin-top: 30px;
+               font-size: 17px;
+               border-radius: 30px;
+               background-color: gray;
+            }
+            .size-button:hover{
+               background-color: green;
+               cursor: pointer;
+            }
+         
+            .footer-container{
+               display: flex;
+               text-align: justify;
+               margin-top: 100px;
+           }
+           .footer{
+               background-color: black;
+               color: white;
+               height: 300px;
+               width: 100%;
+           }
+            .footer h1{
+               padding: 5px 10px 5px 40px;
+               display: inline-block;
+            }
+            .footer p{
+               padding-left: 50px;
+               font-size: 18px;
+            }
+            .icon{
+               padding-left: 30px;
+            }
+        </style>
+        
+    </head>
+    <body>
+         <h1 class="order">Order Now</h1>
+      <form>
+         <table cellpadding="10px" class="size">
+         <tr>
+            <th>Name <td><input type="text" placeholder="Your Name"></td></th>
+         </tr>
+         <tr>
+            <th>Email <td><input type="email" placeholder="Your Email"></td></th> 
+         </tr>
+         <tr>
+            <th>Number <td><input type="text" placeholder="Your Mobile Number"></td></th>
+         </tr>
+         <tr>
+            <th>Your Order <td><input type="text" placeholder="Food Name"></td></th>
+         </tr>
+          <tr>
+             <th>How Much <td><input type="number" placeholder="How Much"></td></th> 
+         </tr>
+         <tr>
+            <th>Address <td><input type="text" placeholder="Your Address"></td></th>
+         </tr>
+         <tr>
+            <th colspan="2">
+               <button onclick="place()" class="size-button">Place Order</button>
+         </tr>
+         </table>
+      </form>
+      <div class="footer-container">
+      <div  class="footer">
+      <h1>Location</h1>
+      <p>India</p>
+      <p>Sri Lanka</p>
+      <p>USA</p>
+      <p>Japan</p>
+      <p>Italy</p>
+      </div>
+      <div  class="footer">
+      <h1>Quick Link</h1>
+      <p>Home</p>
+      <p>Our Menu</p>
+      <p>About Us</p>
+      <p>Order Now</p>
+      </div>
+      <div  class="footer">
+      <h1>Contact</h1>
+      <p>+94 12 3456 789</p>
+      <p>+95 25 5568456</p>
+      <p>jeni123@gmail.com</p>
+      <p>foodshop123@gmail.com</p>
+      </div>
+      <div  class="footer">
+      <h1>Our Service</h1>
+      <p>Fast Delivery</p>
+      <p>Easy Payments</p>
+      <p>24 * 7 Service</p>
+      </div>
+      <div class="footer">
+         <h1>Follows</h1>
+         <div class="icon">
+         <p> <i class="fa fa-facebook"></i></p>
+         <p> <i class="fa fa-instagram"></i></p>
+         <p> <i class="fa fa-twitter"></i></p>
+         <p> <i class="fa fa-linkedin"></i></p>
+         </div>
+      </div>
+      </div>
+    </body>
+</html>

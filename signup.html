@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <script>
+            function sign(){
+                alert(`You are signed up`)
+            }
+        </script>
+        <style>
+            div{
+                height: 500px;
+                width: 400px;
+                margin: 100px 500px;
+                border: 2px solid black;
+                padding-left: 50px;
+                border-radius: 30px;
+            }
+            .box{
+                height: 30px;
+                width: 350px;
+                
+            }
+            .sign{
+                height: 30px;
+                width: 350px;
+                padding-left: 10px;
+                background-color: rgb(47, 188, 244);
+                color:white;
+                margin-top: 30px;
+                box-shadow: 3px 3px 10px skyblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1 style="text-decoration: underline; padding-left: 110px;">Sign-Up</h1>
+            <h2 style="padding-left: 115px; padding-top: 20px;">Welcome !</h2>
+            <p style=" padding-left: 60px;">Please Create an Account below</p>
+            <label style="padding-top: 20px;">Email Address</label><br><br>
+            <input type="email" class="box"><br><br>
+            <label style="padding-top: 20px;">Password</label><br><br>
+            <input type="password" class="box"><br><br>
+            <button onclick="sign()" class="sign">Sign Up</button>
+            <p style="padding-left: 65px; padding-top: 10px;">Already have an account ? <a href="signin.html">Sign in</a></p>
+        </div>
+    </body>
+</html>

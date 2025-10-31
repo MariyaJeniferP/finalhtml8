@@ -1,0 +1,682 @@
+<html>
+    <head>
+      <script>
+         function place(){
+            alert(`Your Order Placed`)
+         }
+      </script>
+        <title>
+            Project
+        </title>
+        <script src="https://kit.fontawesome.com/65d192cc5e.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+        <style>
+            body{
+                background-color: lightpink;
+                overflow-x: hidden;
+            }
+            nav {
+                padding: 20px 20px 11px 10px;
+                width: 100%;
+                font-family: "Cormorant Garamond", serif;
+                font-optical-sizing: auto;
+                font-style: normal;
+                font-size: 25px;
+                background-color: rgba(255, 182, 193, 0.5); 
+                position: fixed;
+                z-index: 1;
+                color: white;
+             }
+            .nav-links {
+               display: none;
+               flex-direction: column;
+            }
+            .nav-links a {
+               text-decoration: none;
+               padding: 12px 40px;
+               border-top: 1px solid #555;
+            }
+
+             #menu-toggle {
+               display: none;
+            }
+
+            .hamburger {
+               display: block;
+               cursor: pointer;
+               width: 30px;
+            }
+            .hamburger span {
+               display: block;
+               height: 3px;
+               margin: 5px;
+               background-color: black;
+            }
+            #menu-toggle:checked + .hamburger + .nav-links {
+               display: flex;
+            }
+            @media (min-width: 750px) {
+            .hamburger {
+                  display: none;
+               }
+            .nav-links {
+                  display: flex ;
+                  flex-direction: row;
+                  background: none;
+               }
+            .nav-links a {
+                  border: none;
+               }
+            }
+            .sign{
+               height: 30px;
+               width: 70px;
+               background-color: orangered;
+               color: white ;
+               font-size: 20px;
+               border-radius: 30px;
+               margin-left: 70px;
+            }
+            .sign:hover{
+               color: black;
+               background-color: white;
+            }
+            .name{
+               font-size: 55px;
+               font-family: "Caveat", cursive;
+               font-optical-sizing: auto;
+               font-weight: weight;
+               font-style: normal;
+               color: red;
+               margin-top: -20px;
+            }
+            .div1{
+                position:relative;
+                animation-duration: 10s;
+                animation-name: anime;
+                animation-iteration-count: infinite;
+                transition-timing-function:linear;
+            }
+            .div1 img{
+                width: 200px;
+                height: 200px;
+                margin-top: 45px;
+            }
+            .div1.animation-container{
+                height: 240px;
+                width: 600px;
+                overflow: hidden;
+            }
+            @keyframes anime {
+                0%{
+                    left:0px;
+                    top:50px;
+                }
+                50%{
+                    left:1300px;
+                    top:50px;
+                 }
+                100%{
+                    left:1300px;
+                    top:500px;
+                }
+            }
+            .div2{
+                position:relative;
+                animation-duration: 10s;
+                animation-name: anime2;
+                animation-iteration-count: infinite;
+                transition: ease-in-out;
+            }
+            .div2 img{
+                height: 200px;
+                width: 200px;
+            }
+            .div2.animation-container{
+                height: 240px;
+                width: 600px;
+                overflow: hidden;
+            }
+            @keyframes anime2 {
+                0%{
+                    left:1300px;
+                    top:30px;
+                }
+                50%{
+                    left:0px;
+                    top:30px;
+               }
+               100%{
+                  left:0px;
+                  top:-400px;
+               }
+               }
+            .heading{
+                text-transform: capitalize;
+                padding-left: 450px;
+                font-size: 50px;
+                text-shadow: -4px 4px 5px gray;
+            }
+            .para{
+                font-size: 5mm;
+                padding-left:350px ;
+                font-family: "Playwrite AU QLD", cursive;
+                font-optical-sizing: auto;
+                font-weight: weight;
+                font-style: normal;
+            }
+            .border{
+                margin-left:670px;
+                margin-top: 20px;
+                height: 40px;
+                width: 200px;
+                border-radius: 30px;
+                background-color: gray;
+                text-align: center;
+                font-size: 25px;
+                padding-top: 5px;
+             }
+            .border:hover{
+                background-color: orangered;
+                cursor: pointer;
+            }
+            .heading2{
+                margin-top: 40px;
+                margin-bottom: 20px;
+                padding-left: 670px;
+                font-size: 40px;
+                text-decoration: underline overline;
+                text-decoration-color: red;
+                text-underline-offset: 10px;
+            }
+            .div3{
+                display: flex;
+            }
+            .card1{
+                height: 400px;
+                width: 350px;
+                background-color: black;
+                box-shadow: 5px 5px 10px gray;
+                margin: 40px 0px 0px 100px;
+             }
+             .card1:hover{
+                background-color: white;
+                transform: scale(1.1);
+                cursor: pointer;
+             }
+             .card1 img{
+                height: 200px;
+                width: 250px;
+                padding-left: 50px;
+             }
+             .card1 h1{
+                text-align: center;
+                color: yellowgreen;
+                text-transform: capitalize;
+             }
+             .card1 p{
+                color :yellowgreen;
+                font-size: 7mm;
+                text-align: center;
+                font-family: "Cormorant Garamond", serif;
+                font-optical-sizing: auto;
+                font-weight: weight;
+                font-style: normal;
+             }
+             .card2{
+                height: 400px;
+                width: 350px;
+                background-color: black;
+                box-shadow: 5px 5px 10px gray;
+                margin: 40px 0px 0px 140px;
+             }
+             .card2:hover{
+                background-color: white;
+                transform: scale(1.1);
+                cursor: pointer;
+             }
+             .card2 img{
+                height: 200px;
+                width: 250px;
+                padding-left: 50px;
+             }
+             .card2 h1{
+                text-align: center;
+                color: yellowgreen;
+                text-transform: capitalize;
+             }
+             .card2 p{
+                color :yellowgreen;
+                font-size: 7mm;
+                text-align: center;
+                font-family: "Cormorant Garamond", serif;
+                font-optical-sizing: auto;
+                font-weight: weight;
+                font-style: normal;
+             }
+             .card3{
+                height: 400px;
+                width: 350px;
+                background-color: black;
+                box-shadow: 5px 5px 10px gray;
+                margin: 40px 0px 0px 140px;
+             }
+             .card3:hover{
+                background-color: white;
+                transform: scale(1.1);
+                cursor: pointer;
+             }
+             .card3 img{
+                height: 200px;
+                width: 250px;
+                padding-left: 50px;
+             }
+             .card3 h1{
+                text-align: center;
+                color: yellowgreen;
+                text-transform: capitalize;
+             }
+             .card3 p{
+                color :yellowgreen;
+                font-size: 7mm;
+                text-align: center;
+                font-family: "Cormorant Garamond", serif;
+                font-optical-sizing: auto;
+                font-weight: weight;
+                font-style: normal;
+             }
+             .card4{
+                height: 400px;
+                width: 350px;
+                background-color: black;
+                box-shadow: 5px 5px 10px gray;
+                margin: 70px 0px 0px 100px;
+                padding-top: 20px;
+             }
+             .card4:hover{
+                background-color: white;
+                transform: scale(1.1);
+                cursor: pointer;
+             }
+             .card4 img{
+                height: 200px;
+                width: 250px;
+                padding-left: 50px;
+             }
+             .card4 h1{
+                text-align: center;
+                color: yellowgreen;
+                text-transform: capitalize;
+             }
+             .card4 p{
+                color :yellowgreen;
+                font-size: 7mm;
+                text-align: center;
+                font-family: "Cormorant Garamond", serif;
+                font-optical-sizing: auto;
+                font-weight: weight;
+                font-style: normal;
+             }
+             .card5{
+                height: 400px;
+                width: 350px;
+                background-color: black;
+                box-shadow: 5px 5px 10px gray;
+                margin: 70px 0px 0px 140px;
+                padding-top: 20px;
+             }
+             .card5:hover{
+                background-color: white;
+                transform: scale(1.1);
+                cursor: pointer;
+             }
+             .card5 img{
+                height: 200px;
+                width: 250px;
+                padding-left: 50px;
+             }
+             .card5 h1{
+                text-align: center;
+                color: yellowgreen;
+                text-transform: capitalize;
+             }
+             .card5 p{
+                color :yellowgreen;
+                font-size: 7mm;
+                text-align: center;
+                font-family: "Cormorant Garamond", serif;
+                font-optical-sizing: auto;
+                font-weight: weight;
+                font-style: normal;
+             }
+             .card6{
+                height: 400px;
+                width: 350px;
+                background-color: black;
+                box-shadow: 5px 5px 10px gray;
+                margin: 70px 0px 0px 140px;
+                padding-top: 20px;
+             }
+             .card6:hover{
+                background-color: white;
+                transform: scale(1.1);
+                cursor: pointer;
+             }
+             .card6 img{
+                height: 200px;
+                width: 250px;
+                padding-left: 50px;
+             }
+             .card6 h1{
+                text-align: center;
+                color: yellowgreen;
+                text-transform: capitalize;
+             }
+             .card6 p{
+                color : yellowgreen;
+                font-size: 7mm;
+                text-align: center;
+                font-family: "Cormorant Garamond", serif;
+                font-optical-sizing: auto;
+                font-weight: weight;
+                font-style: normal;
+             }
+             .image{
+                float: right;
+                margin-top:50px;
+                height: 500px;
+                width: 500px;
+             }
+             .heading3{
+                margin-top: 170px;
+                margin-left :50px;
+                font-size: 60px;
+                display: block;
+                font-family: "Caveat", cursive;
+                font-optical-sizing: auto;
+                font-weight: weight;
+                font-style: normal;
+                color : blueviolet;
+             }
+             .para2{
+                margin-top: 10px;
+                margin-left :20px;
+                text-align: justify;
+                color: maroon;
+                font-size: 18px;
+                padding-left: 30px;
+             }
+             .click{
+               height:30px;
+               width: 200px;
+               background-color: gray;
+               border-radius: 30px;
+               margin-left: 150px;
+               text-align: center;
+               font-size: 25px;
+               padding:5px;
+               cursor: pointer;
+               
+             }
+             .click:hover{
+               background-color: orangered;
+               cursor: pointer;
+             }
+             .image2{
+               height: 600px;
+               width: 750px;
+               margin-top:10px;
+               float: left;
+             }
+             .heading4{
+                margin-top: 100px;
+                font-size: 60px;
+                font-family: "Caveat", cursive;
+                font-optical-sizing: auto;
+                font-weight: weight;
+                font-style: normal;
+                color : darkgreen;
+             }
+             .subhead{
+               margin-left: 50px;
+               margin-top: 30px;
+             }
+             .para3{
+               margin-top: 20px;
+               margin-left :10px;
+               text-align: justify;
+               color: maroon;
+               font-size: 20px;
+             }
+             .order{
+               margin-left: 640px;
+               margin-top: 200px;
+               color: red;
+               font-size: 50px;
+               text-decoration: underline;
+               text-decoration-color:black;
+               text-underline-offset: 10px;
+               font-family: "Caveat", cursive;
+               font-optical-sizing: auto;
+               font-weight: weight;
+               font-style: normal;
+             }
+             .size{
+               margin: 60px;
+               margin-left: 350px;
+               border: 3px solid black;
+               height: 500px;
+               width: 800px;
+               background-image: url("back.jpeg");
+               background-repeat: no-repeat;
+               padding-left: 100px;
+               padding-top: 50px;
+               background-size: cover;
+               background-position: left;
+               color: white;
+               font-size: 20px;
+             }
+             .size-button{
+               height: 50px;
+               width: 200px;
+               margin-left: -200px;
+               margin-top: 30px;
+               font-size: 17px;
+               border-radius: 30px;
+               background-color: gray;
+            }
+            .size-button:hover{
+               background-color: green;
+               cursor: pointer;
+            }
+            .footer-container{
+               display: flex;
+               text-align: justify;
+               margin-top: 100px;
+           }
+           .footer{
+               background-color: black;
+               color: white;
+               height: 300px;
+               width: 100%;
+           }
+            .footer h1{
+               padding: 5px 10px 5px 40px;
+               display: inline-block;
+            }
+            .footer p{
+               padding-left: 50px;
+               font-size: 18px;
+            }
+            .icon{
+               padding-left: 30px;
+            }
+        </style>
+    </head>
+    <body class="div4">
+      <nav>
+      <input type="checkbox" id="menu-toggle" />
+      <label class="hamburger" for="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+      </label>
+      <div class="nav-links">
+         <a href="#" class="name"><b>Foodio</b></a>
+         <a href="home.html"><b>Home</b></a>
+         <a href="item.html"><b>Our Menu</b></a>
+         <a href="about.html"><b>About Us</b></a>
+         <a href="order.html"><b>Order Now</b></a>
+         <a href="foot.html"><b>Contact</b></a>
+         <a href="signin.html" class="sign"><b>Sign in</b></a>
+         <a href="signup.html" class="sign"><b>Sign Up</b></a>
+      </div>
+      </nav>
+        <div class="div1 animation-container">
+            <img src="burger.jpeg">
+        </div>
+        <h1 class="heading">order your best food anytime</h1>
+        <p class="para">Hey, Our delicious food is waiting for you, we are always near to you with fresh item of food</p>
+         <a href="item.html" style="text-decoration: none; color: black;"><h3 class="border">Explore Food</h3></a>
+        <div class="div2 animation-container">
+            <img src="pizza.jpeg">
+        </div>
+        <h1 class="heading2">Our Menu</h1>
+        <div class="div3">
+        <div class="card1">
+            <img src="coffee.jpeg" alt="image does not found">
+            <h1>hot beverages</h1>
+            <p>Wide range of Steaming hot coffee to make you fresh and light.</p>
+        </div>
+        <div class="card2">
+            <img src="cold.jpeg" alt="image does not found">
+            <h1>cold beverages</h1>
+            <p>Creamy and frothy cold coffee to make you cool.</p>
+        </div>
+        <div class="card3">
+            <img src="strawberry.jpeg" alt="image does not found">
+            <h1>refreshment</h1>
+            <p>Fruit and icy refreshing drink to make feel refresh.</p>
+        </div>
+      </div>
+      <div class="div3">
+        <div class="card4">
+            <img src="combo.jpeg" alt="image does not found">
+            <h1>special combos</h1>
+            <p>Your favorite eating and drinking combotions.</p>
+        </div>
+        <div class="card5">
+            <img src="http://www.pngall.com/wp-content/uploads/7/Dessert-PNG-Photo.png" alt="image does not found">
+            <h1>dessert</h1>
+            <p>Satiate your palate and take you on a culinary treat.</p>
+        </div>
+        <div class="card6">
+            <img src="bf.jpeg" alt="image does not found">
+            <h1>burger & french fries</h1>
+            <p>Quick bites to satisfy your small size hunger.</p>
+        </div> 
+      </div>
+      <img src="burger2.jpeg" alt="image does not found" class="image">
+      <h1 class="heading3">Get Fresh Food in a Easy Way</h1>
+      <p class="para2">Many services offer fresh produce delivery, saving time and effort.
+        These offer a wide variety of fresh, local produce directly from farmers.
+        Growing your own herbs and vegetables can provide a constant supply of fresh ingredients.
+        Prioritize buying fruits and vegetables that are in season, as they are often fresher and more affordable.
+        A CSA allows you to subscribe to a local farm and receive regular deliveries of fresh produce.
+        For convenience, consider pre-cut vegetables or frozen fruits, which can be just as nutritious.
+        Shop at stores known for their fresh produce and high sales volume, ensuring a quick turnaround of items.
+        Purchase smaller amounts of fresh produce to avoid spoilage and waste.
+        Learn basic techniques like pickling or freezing to extend the shelf life of fresh produce.
+        Cook extra portions and use leftovers creatively to avoid food waste, ensuring you get the most out of your fresh purchases.</p>
+        <a href="order.html" style="text-decoration: none; color: black;"><h2 class="click">Order Now ></h2></a>
+        <img src="pasta.jpeg" alt="image does not found" class="image2">
+         <h1 class="heading4">About Us</h1>
+         <h1 class="subhead">Why Choose Us ?</h1>
+         <p class="para3">This alternative directly addresses the reader’s decision-making process, 
+            positioning your company as the optimal solution to their needs. 
+            It conveys confidence in your offerings without being overly boastful.
+            The focus to the positive outcomes that clients can expect from working with your company.
+            It suggests that you clearly understand the value you provide to your customers.
+            “Here’s Why We Stand Out” can be particularly impactful when used in visual presentations 
+            or video content, where you can literally show the reader or viewer what sets you apart.
+         </p>
+      </div>
+      <h1 class="order">Order Now</h1>
+      <form>
+         <table cellpadding="10px" class="size">
+         <tr>
+            <th>Name <td><input type="text" placeholder="Your Name"></td></th>
+         </tr>
+         <tr>
+            <th>Email <td><input type="email" placeholder="Your Email"></td></th> 
+         </tr>
+         <tr>
+            <th>Number <td><input type="text" placeholder="Your Mobile Number"></td></th>
+         </tr>
+         <tr>
+            <th>Your Order <td><input type="text" placeholder="Food Name"></td></th>
+         </tr>
+          <tr>
+             <th>How Much <td><input type="number" placeholder="How Much"></td></th> 
+         </tr>
+         <tr>
+            <th>Address <td><input type="text" placeholder="Your Address"></td></th>
+         </tr>
+         <tr>
+            <th colspan="2">
+               <button onclick="place()" class="size-button">Place Order</button>
+         </tr>
+         </table>
+      </form>
+      <div class="footer-container">
+      <div  class="footer">
+      <h1>Location</h1>
+      <p>India</p>
+      <p>Sri Lanka</p>
+      <p>USA</p>
+      <p>Japan</p>
+      <p>Italy</p>
+      </div>
+      <div  class="footer">
+      <h1>Quick Link</h1>
+      <p>Home</p>
+      <p>Our Menu</p>
+      <p>About Us</p>
+      <p>Order Now</p>
+      </div>
+      <div  class="footer">
+      <h1>Contact</h1>
+      <p>+94 12 3456 789</p>
+      <p>+95 25 5568456</p>
+      <p>jeni123@gmail.com</p>
+      <p>foodshop123@gmail.com</p>
+      </div>
+      <div  class="footer">
+      <h1>Our Service</h1>
+      <p>Fast Delivery</p>
+      <p>Easy Payments</p>
+      <p>24 * 7 Service</p>
+      </div>
+      <div class="footer">
+         <h1>Follows</h1>
+         <div class="icon">
+         <p> <i class="fa fa-facebook"></i></p>
+         <p> <i class="fa fa-instagram"></i></p>
+         <p> <i class="fa fa-twitter"></i></p>
+         <p> <i class="fa fa-linkedin"></i></p>
+         </div>
+      </div>
+      </div>
+    </body>
+</html>
